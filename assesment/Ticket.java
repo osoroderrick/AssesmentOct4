@@ -58,10 +58,10 @@ public abstract class Ticket implements PayAble{
     @Override
     public String toString() {
         return
-                " Ticket Id:" + id +
+                " Ticket Id: " + id +
                 "\n Origin: " + origin +
-                "\n Destination: " + destination + 
-                "\n seatNumber: " + seatNumber + '\'' +
-                "\n" + price ;
+                "\n Destination: " + destination +
+                "\n seatNumber: " + seatNumber +
+                "\n" + " " +price ;
     }
 }

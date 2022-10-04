@@ -1,7 +1,8 @@
 package assesment;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Collections;
+
 
 public class FlightApp {
     public void printEachFlightCrewJob(ArrayList<FlightCrewJob> flightCrewJobs){
@@ -17,13 +18,18 @@ public class FlightApp {
     }
 
     public void sortAndPrintFlightCrewMembersByJob(ArrayList<FlightCrewJob> flightCrewJobs){
-        ArrayList<String> flightsCrewMembersByJob;
-        for (FlightCrewJob flightCrewJob : flightCrewJobs){
-
+        Collections.sort(flightCrewJobs);
+        for (FlightCrewJob flightCrewJob: flightCrewJobs) {
+            System.out.println(flightCrewJob);
         }
     }
 
     public void printAllJobsExceptThisCrewMemberJob(ArrayList<FlightCrewJob> flightCrewJobs,CrewMember crewMember){
+            flightCrewJobs.remove(crewMember.getJob());
 
+        for (FlightCrewJob flightCrewJob : flightCrewJobs) {
+            System.out.println(flightCrewJob);
+
+        }
     }
 }
